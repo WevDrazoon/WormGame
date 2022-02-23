@@ -1,0 +1,242 @@
+[gd_scene load_steps=23 format=2]
+
+[ext_resource path="res://ASSETS/MainMenu/Main menu bg.png" type="Texture" id=1]
+[ext_resource path="res://ASSETS/Ending/e6_dust.png" type="Texture" id=2]
+[ext_resource path="res://ASSETS/Ending/e4.png" type="Texture" id=3]
+[ext_resource path="res://ASSETS/Ending/wiggle1.png" type="Texture" id=4]
+[ext_resource path="res://ASSETS/Ending/wiggle2.png" type="Texture" id=5]
+[ext_resource path="res://ASSETS/Ending/wiggle3.png" type="Texture" id=6]
+[ext_resource path="res://ASSETS/Ending/e1.png" type="Texture" id=7]
+[ext_resource path="res://ASSETS/gameover/hate1.png" type="Texture" id=8]
+[ext_resource path="res://ASSETS/Ending/e6_worm.png" type="Texture" id=9]
+[ext_resource path="res://ASSETS/gameover/purple.png" type="Texture" id=10]
+[ext_resource path="res://ASSETS/Ending/e_bg.png" type="Texture" id=11]
+[ext_resource path="res://ASSETS/Ending/e6_book.png" type="Texture" id=12]
+[ext_resource path="res://ASSETS/Ending/e2.png" type="Texture" id=13]
+[ext_resource path="res://ASSETS/gameover/hate2.png" type="Texture" id=14]
+[ext_resource path="res://ASSETS/gameover/hate3.png" type="Texture" id=15]
+[ext_resource path="res://ASSETS/Ending/e3.png" type="Texture" id=16]
+[ext_resource path="res://ASSETS/Ending/friendship.png" type="Texture" id=17]
+[ext_resource path="res://ending_cutscene.gd" type="Script" id=18]
+[ext_resource path="res://ASSETS/Ending/e4_5.png" type="Texture" id=19]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 4 ), ExtResource( 6 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "wiggle",
+"speed": 3.0
+} ]
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 14 ), ExtResource( 15 ), ExtResource( 8 ) ],
+"loop": true,
+"name": "default",
+"speed": 3.0
+} ]
+
+[sub_resource type="Animation" id=3]
+resource_name = "EndCutscene"
+length = 18.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("first half/e1:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("first half/e2:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1.8, 3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("first half/e3:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 3.5, 4.7 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("first half/e4:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 5.3, 6.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("first half/e4_5:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 6.9, 8 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("book half:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 8.8, 9.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("book half/book:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 8.8, 9.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("book half/worm bubble:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 12.3, 12.9 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("book half/dust bubble:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 11.2, 11.8 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("win half:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0, 15, 15.7 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[node name="ending_cutscene" type="Node2D"]
+script = ExtResource( 18 )
+
+[node name="first half" type="TextureRect" parent="."]
+margin_right = 1024.0
+margin_bottom = 600.0
+texture = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="e1" type="Sprite" parent="first half"]
+position = Vector2( 528, 297 )
+texture = ExtResource( 7 )
+
+[node name="e2" type="Sprite" parent="first half"]
+position = Vector2( 537, 303 )
+texture = ExtResource( 13 )
+
+[node name="e3" type="Sprite" parent="first half"]
+position = Vector2( 516, 297 )
+texture = ExtResource( 16 )
+
+[node name="e4" type="Sprite" parent="first half"]
+position = Vector2( 518.503, 297.56 )
+texture = ExtResource( 3 )
+
+[node name="e4_5" type="Sprite" parent="first half"]
+position = Vector2( 518.25, 298.047 )
+texture = ExtResource( 19 )
+
+[node name="book half" type="TextureRect" parent="."]
+margin_right = 1024.0
+margin_bottom = 600.0
+texture = ExtResource( 11 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="book" type="Sprite" parent="book half"]
+position = Vector2( 510.531, 299.813 )
+texture = ExtResource( 12 )
+
+[node name="worm bubble" type="Sprite" parent="book half"]
+position = Vector2( 512.416, 298.396 )
+texture = ExtResource( 9 )
+
+[node name="dust bubble" type="Sprite" parent="book half"]
+position = Vector2( 514.774, 301.695 )
+texture = ExtResource( 2 )
+
+[node name="win half" type="TextureRect" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="worm" type="AnimatedSprite" parent="win half"]
+position = Vector2( 545.907, 302.285 )
+frames = SubResource( 1 )
+animation = "wiggle"
+playing = true
+
+[node name="love" type="AnimatedSprite" parent="win half"]
+position = Vector2( 533.159, 247.186 )
+frames = SubResource( 2 )
+playing = true
+
+[node name="friendship" type="Sprite" parent="win half"]
+visible = false
+position = Vector2( 513.153, 299.97 )
+texture = ExtResource( 17 )
+
+[node name="EndingAnimation" type="AnimationPlayer" parent="."]
+autoplay = "EndCutscene"
+anims/EndCutscene = SubResource( 3 )
+
+[connection signal="animation_finished" from="EndingAnimation" to="." method="_on_EndingAnimation_animation_finished"]

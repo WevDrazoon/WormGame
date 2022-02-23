@@ -1,0 +1,185 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://ASSETS/gameover/purple.png" type="Texture" id=1]
+[ext_resource path="res://ASSETS/Intro/p2.png" type="Texture" id=2]
+[ext_resource path="res://ASSETS/Intro/p3_5.png" type="Texture" id=3]
+[ext_resource path="res://ASSETS/Intro/p4.png" type="Texture" id=4]
+[ext_resource path="res://ASSETS/Intro/p3.png" type="Texture" id=5]
+[ext_resource path="res://ASSETS/Intro/p1.png" type="Texture" id=6]
+[ext_resource path="res://ASSETS/Intro/p5_worm.png" type="Texture" id=7]
+[ext_resource path="res://ASSETS/Intro/p5_bg.png" type="Texture" id=8]
+[ext_resource path="res://ASSETS/Intro/p5_scrap.png" type="Texture" id=9]
+[ext_resource path="res://ASSETS/Intro/p5_frame.png" type="Texture" id=10]
+[ext_resource path="res://intro_cutscene.gd" type="Script" id=11]
+
+[sub_resource type="Animation" id=1]
+resource_name = "Intro"
+length = 11.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("TextureRect/p1:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1.3 ),
+"transitions": PoolRealArray( 1, 43.7133 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("TextureRect/p2:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1.6, 2.6 ),
+"transitions": PoolRealArray( 1, 1, 29532.3 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("TextureRect/p3:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 3.1, 4.1 ),
+"transitions": PoolRealArray( 1, 1, 10.1964 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("TextureRect/p3_5:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 4.5, 5.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("TextureRect/p4:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 6.1, 7.1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("ColorRect:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 8, 9.1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("ColorRect/worm:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 8, 8.5, 9.1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 640.982, 278.275 ), Vector2( 640.982, 278.275 ), Vector2( 507.791, 286.599 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("ColorRect/scrap:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 8, 8.5, 9.1, 9.6, 10.1, 10.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 493.521, 262.982 ), Vector2( 493.521, 296.113 ), Vector2( 493.521, 296.113 ), Vector2( 493.521, 262.982 ), Vector2( 493.521, 296.113 ), Vector2( 493.521, 262.982 ), Vector2( 493.521, 296.113 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+
+[node name="intro_cutscene" type="Node2D"]
+script = ExtResource( 11 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_right = 1025.0
+margin_bottom = 597.0
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="p1" type="Sprite" parent="TextureRect"]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 534.836, 291.936 )
+texture = ExtResource( 6 )
+
+[node name="p2" type="Sprite" parent="TextureRect"]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 554.393, 299.961 )
+texture = ExtResource( 2 )
+
+[node name="p3" type="Sprite" parent="TextureRect"]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 511.376, 318.942 )
+texture = ExtResource( 5 )
+
+[node name="p3_5" type="Sprite" parent="TextureRect"]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 511.823, 318.942 )
+texture = ExtResource( 3 )
+
+[node name="p4" type="Sprite" parent="TextureRect"]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 543.448, 313.596 )
+texture = ExtResource( 4 )
+
+[node name="ColorRect" type="TextureRect" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 1.33484
+margin_top = 1.33484
+margin_right = 1025.33
+margin_bottom = 601.335
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="bg" type="Sprite" parent="ColorRect"]
+position = Vector2( 509.909, 284.879 )
+texture = ExtResource( 8 )
+
+[node name="scrap" type="Sprite" parent="ColorRect"]
+position = Vector2( 493.521, 262.982 )
+texture = ExtResource( 9 )
+
+[node name="worm" type="Sprite" parent="ColorRect"]
+position = Vector2( 507.791, 286.599 )
+texture = ExtResource( 7 )
+
+[node name="frame" type="Sprite" parent="ColorRect"]
+position = Vector2( 508.981, 285.41 )
+texture = ExtResource( 10 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "Intro"
+anims/Intro = SubResource( 1 )
+"anims/first comic" = SubResource( 2 )
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
